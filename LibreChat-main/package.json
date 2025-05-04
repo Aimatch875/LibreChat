@@ -9,6 +9,7 @@
   ],
   "scripts": {
     "update": "node config/update.js",
+    "build": "next build",
     "add-balance": "node config/add-balance.js",
     "set-balance": "node config/set-balance.js",
     "list-balances": "node config/list-balances.js",
