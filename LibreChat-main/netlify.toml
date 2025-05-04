@@ -1,4 +1,4 @@
 [build]
-  base = "client"
-  publish = "dist"
+  base = "LibreChat-main/client"
   command = "npm run build"
+  publish = "dist"
