@@ -1,6 +1,0 @@
-[build]
-  command = "npm run build:data-provider && cd client && npm run build"
-  publish = "client/dist"
-
-[functions]
-  directory = "client/netlify/functions"
