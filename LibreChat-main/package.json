@@ -8,6 +8,7 @@
     "packages/*"
   ],
   "scripts": {
+    "start": "node api/index.js",
     "update": "node config/update.js",
     "build": "next build",
     "frontend": "cd client && npm run build",
