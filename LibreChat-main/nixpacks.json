@@ -1,0 +1,8 @@
+{
+  "phases": {
+    "build": { "cmds": [ "npm run frontend" ] }
+  },
+  "start": {
+    "cmd": "npm run backend"
+  }
+}
