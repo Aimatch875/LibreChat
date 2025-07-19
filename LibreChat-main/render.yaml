@@ -1,0 +1,18 @@
+services:
+  - type: web
+    name: librechat
+    build:
+      command: npm run build:client
+    startCommand: npm start
+    envVars:
+      - key: NODE_ENV
+        value: production
+  - type: web
+    name: api
+    build:
+      command: npm install
+    startCommand: npm start
+    env:
+      - key: SUPABASE_URL
+      - key: SUPABASE_ANON_KEY
+      - key: OPENROUTER_API_KEY
