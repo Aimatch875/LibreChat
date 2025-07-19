@@ -44,6 +44,7 @@ const startServer = async () => {
   const indexHTML = fs.readFileSync(indexPath, 'utf8');
 
   app.get('/health', (_req, res) => res.status(200).send('OK'));
+  app.get('/api/status', (_req, res) => res.status(200).json({ ok: true }));
 
   /* Middleware */
   app.use(noIndex);
