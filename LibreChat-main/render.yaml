@@ -1,0 +1,9 @@
+services:
+  - type: web
+    name: librechat
+    build:
+      command: npm run build:client
+    startCommand: npm start
+    envVars:
+      - key: NODE_ENV
+        value: production
