@@ -1,0 +1,24 @@
+services:
+  - type: web
+    name: librechat-frontend
+    build:
+      command: npm install && npm run build:data-provider && npm run build:mcp && npm run build:data-schemas && cd client && npm install && npm run build
+    startCommand: npm run start
+    env:
+      - key: NODE_ENV
+        value: production
+      - key: SUPABASE_URL
+      - key: SUPABASE_ANON_KEY
+      - key: OPENROUTER_API_KEY
+
+  - type: web
+    name: librechat-api
+    build:
+      command: npm install && npm run build:data-provider && npm run build:mcp && npm run build:data-schemas && cd api && npm install
+    startCommand: npm run start
+    env:
+      - key: NODE_ENV
+        value: production
+      - key: SUPABASE_URL
+      - key: SUPABASE_ANON_KEY
+      - key: OPENROUTER_API_KEY
