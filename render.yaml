@@ -3,7 +3,7 @@ services:
     name: LibreChat
     rootDir: LibreChat-main
     build:
-      command: npm install && npm run frontend
+      command: npm install && npm run build
     startCommand: npm run start
     env:
       - key: NODE_ENV
