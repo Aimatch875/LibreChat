@@ -1,0 +1,36 @@
+services:
+  - type: web
+    name: librechat-frontend
+    build:
+      command: npm run frontend
+    startCommand: npm run backend
+    env:
+      - key: SUPABASE_URL
+      - key: SUPABASE_ANON_KEY
+      - key: OPENROUTER_API_KEY
+      - key: MONGO_URI
+      - key: JWT_SECRET
+      - key: PORT
+      - key: HOST
+      - key: ALLOW_SOCIAL_LOGIN
+      - key: SEARCH
+      - key: MEILI_HOST
+      - key: MEILI_MASTER_KEY
+
+  - type: web
+    name: librechat-api
+    build:
+      command: npm install
+    startCommand: npm run backend
+    env:
+      - key: SUPABASE_URL
+      - key: SUPABASE_ANON_KEY
+      - key: OPENROUTER_API_KEY
+      - key: MONGO_URI
+      - key: JWT_SECRET
+      - key: PORT
+      - key: HOST
+      - key: ALLOW_SOCIAL_LOGIN
+      - key: SEARCH
+      - key: MEILI_HOST
+      - key: MEILI_MASTER_KEY
