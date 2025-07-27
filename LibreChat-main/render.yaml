@@ -14,7 +14,7 @@ services:
     name: librechat-backend
     env: node
     buildCommand: npm install
-    startCommand: npm run backend
+    startCommand: npm start
     envVars:
       - key:  NEXTAUTH_SECRET
       - key:  SUPABASE_URL
