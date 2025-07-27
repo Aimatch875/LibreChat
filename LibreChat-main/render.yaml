@@ -1,0 +1,22 @@
+services:
+  - type: web
+    name: librechat-frontend
+    env: node
+    buildCommand: npm run frontend
+    startCommand: npm run start
+    envVars:
+      - key: https://hvfrrvugxfrcmemwtany.supabase.co 
+      - key: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Imh2ZnJydnVneGZyY21lbXd0YW55Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3NDQ0NjgwNTUsImV4cCI6MjA2MDA0NDA1NX0.n__qp2v_FktXqO-7fkiqAOLSNFh91L1UlS0PnXXiHB4 
+      - key: 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 
+
+  - type: web
+    name: librechat-backend
+    env: node
+    buildCommand: npm install
+    startCommand: npm run backend
+    envVars:
+      - key: https://hvfrrvugxfrcmemwtany.supabase.co 
+      - key: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Imh2ZnJydnVneGZyY21lbXd0YW55Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3NDQ0NjgwNTUsImV4cCI6MjA2MDA0NDA1NX0.n__qp2v_FktXqO-7fkiqAOLSNFh91L1UlS0PnXXiHB4 
+      - key: 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
+      - key: M67h0zTyVcN7k3gLSCIwbFvXob0EVoZ1Q9uJqRKn8HYo=
+       
