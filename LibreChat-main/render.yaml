@@ -6,9 +6,9 @@ services:
     buildCommand: npm run frontend
     startCommand: npm run backend
     envVars:
-      - key: 
-      - key:  
-      - key: 
+      - key:  SUPABASE_URL
+      - key:  SUPABASE_ANON_KEY
+      - key:  OPENROUTER_API_KEY
 
   - type: web
     name: librechat-backend
@@ -16,8 +16,8 @@ services:
     buildCommand: npm install
     startCommand: npm run backend
     envVars:
-      - key:  
-      - key:  
-      - key: 
-      - key: 
+      - key:  NEXTAUTH_SECRET
+      - key:  SUPABASE_URL
+      - key:  SUPABASE_ANON_KEY
+      - key:  OPENROUTER_API_KEY
        
