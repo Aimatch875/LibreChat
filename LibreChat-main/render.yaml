@@ -1,23 +1,20 @@
 services:
   - type: web
-    name: librechat-frontend
-    env: node
-    plan: free
-    buildCommand: cd client && npm install && npm run build 
-    startCommand: cd client && npm run preview-prod
-    envVars:
-      - key:  SUPABASE_URL
-      - key:  SUPABASE_ANON_KEY
-      - key:  OPENROUTER_API_KEY
-
-  - type: web
-    name: librechat-backend
-    env: node
-    buildCommand: npm install
+    name: librechat
+    runtime: node
+    rootDir: LibreChat-main
+    buildCommand: npm install && npm run frontend
     startCommand: npm start
     envVars:
-      - key:  NEXTAUTH_SECRET
-      - key:  SUPABASE_URL
-      - key:  SUPABASE_ANON_KEY
-      - key:  OPENROUTER_API_KEY
-       
+      - key: CRYPT_KEY
+        generateValue: true
+      - key: JWT_SECRET
+        generateValue: true
+      - key: JWT_REFRESH_SECRET
+        generateValue: true
+      - key: SUPABASE_URL
+        sync: false
+      - key: SUPABASE_ANON_KEY
+        sync: false
+      - key: OPENROUTER_API_KEY
+        sync: false
