@@ -3,8 +3,8 @@ services:
     name: librechat-frontend
     env: node
     plan: free
-    buildCommand: npm run frontend
-    startCommand: npm run backend
+    buildCommand: cd client && npm install && npm run build 
+    startCommand: cd client && npm run preview-prod
     envVars:
       - key:  SUPABASE_URL
       - key:  SUPABASE_ANON_KEY
